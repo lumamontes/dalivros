@@ -65,6 +65,19 @@ export default function UserMenuDropdown({
             </div>
             
             <div className="px-1 py-1">
+            <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={`${
+                      active ? "bg-gray-100' text-gray-600" : "text-black"
+                    } group flex w-full items-center rounded-md px-2 py-2 text-sm gap-2`}
+                    onClick={() => handleSignOut()}
+                  > 
+                    Meus livros
+                  </button>
+                )}
+              </Menu.Item>
+              
               <Menu.Item>
                 {({ active }) => (
                   <button

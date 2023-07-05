@@ -14,6 +14,9 @@ module.exports = {
         black: {
           900: "#120F22",
           700: "#454448"
+        },
+        secondary: {
+          100: '#BB533E',
         }
       },
       backgroundImage: {
