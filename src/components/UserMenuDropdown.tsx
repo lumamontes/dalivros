@@ -7,6 +7,7 @@ import { Session } from "next-auth";
 import { signOut } from "next-auth/react";
 import { Fragment } from "react";
 import { Text } from "./Text";
+import Link from "next/link";
 
 export interface UserMenuDropdownProps {
   session?: Session;
@@ -67,14 +68,13 @@ export default function UserMenuDropdown({
             <div className="px-1 py-1">
             <Menu.Item>
                 {({ active }) => (
-                  <button
+                  <Link href="/mybooks"
                     className={`${
                       active ? "bg-gray-100' text-gray-600" : "text-black"
                     } group flex w-full items-center rounded-md px-2 py-2 text-sm gap-2`}
-                    onClick={() => handleSignOut()}
                   > 
                     Meus livros
-                  </button>
+                  </Link>
                 )}
               </Menu.Item>
               

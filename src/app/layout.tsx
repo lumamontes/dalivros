@@ -1,6 +1,7 @@
 import './globals.css'
 import { Poppins } from 'next/font/google'
 import { NextAuthProvider } from "./providers";
+import { LikedProvider } from './context/LikedContext';
 
 const poppins = Poppins({
   weight: '400',

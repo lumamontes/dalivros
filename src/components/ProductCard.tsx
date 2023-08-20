@@ -1,10 +1,14 @@
 import { BookVolume } from '@/@types/BookVolume';
 import Image from 'next/image'
 import Link from 'next/link'
+import HeartIcon from "./HeartIcon";
+import IconButton from "./IconButton";
+import { useLikes } from '@/hooks/useLikes';
+// import { useLikes } from '@/hooks/useLikes';
 
 function ProductCard( {product} : {product: BookVolume} ) {
   const handle = product.volumeInfo.title;
-  const title = product.volumeInfo.title
+  const title = product.volumeInfo.title.length > 50 ? product.volumeInfo.title.substring(0, 50) + '...' : product.volumeInfo.title;
   const description = product.searchInfo?.textSnippet || 'Descrição não disponível'
   const imageNode = product.volumeInfo.imageLinks?.thumbnail;
   function generateSlug(title: string, maxLength = 100) {
@@ -20,20 +24,26 @@ function ProductCard( {product} : {product: BookVolume} ) {
   
     return slug;
   }
+
+  const { liked, handleLikeProduct } = useLikes({ productId: product.id, product: {
+    id: product.id,
+    title: product.volumeInfo.title,
+    description: product.searchInfo?.textSnippet || 'Descrição não disponível',
+    image: product.volumeInfo.imageLinks?.thumbnail,
+  } });
   return (
     <Link
-      href={
-        {
-            pathname:`/products/${generateSlug(handle)}`,
-            query: {
-                volumeId: product.id
-            }
-        }}
-        as={`/products/${generateSlug(handle)}`}
-      passHref
-      legacyBehavior
+      href={''
+
+        // {
+        //     pathname:`/products/${generateSlug(handle)}`,
+        //     query: {
+        //         volumeId: product.id,
+        //     }
+        }
+        // as={`/products/${generateSlug(handle)}`}
     >
-      <a className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
+      <div className="h-120 w-72 rounded shadow-lg mx-auto border border-palette-lighter">
         <div className="h-72 border-b-2 border-palette-lighter relative">
           <Image
             src={imageNode}
@@ -53,9 +63,20 @@ function ProductCard( {product} : {product: BookVolume} ) {
             className="text-palette-dark font-primary font-medium text-base absolute bottom-0 right-0 mb-4 pl-8 pr-4 pb-1 pt-2 bg-palette-lighter 
             rounded-tl-sm triangle"
           >
+          <IconButton
+            icon={
+              <HeartIcon
+                className={`${liked ? "fill-red-500" : "fill-white"} ${
+                  liked ? "stroke-red-500" : "stroke-gray-400"
+                }`}
+              />
+            }
+            onClick={handleLikeProduct}
+          />
+
           </div>
         </div>
-      </a>
+      </div>
     </Link>
   )
 }
