@@ -10,22 +10,20 @@
 ![image](https://github.com/lumamontes/dalivros/assets/60052718/431f7e53-8d37-4337-bc7c-788569a20c05)
 
 
+This project is a website for book searching that utilizes the Google Books API to retrieve books and enables users to mark books as favorites
 
+I developed this project as a study on the use of Next.js with the /app structure, along with employing the useSWR library to fetch books from the Google Books API. Additionally, NextAuth.js was used for authentication with Google
 
-Esse projeto se trata de um site de pesquisa de livros que usa a API do Google para buscar livros e permite que o usuário marque livros como favoritos.
+Icons drawed by [Luana Góes](https://luanagoes.vercel.app) ✨
 
-Usei esse projeto como um estudo sobre o uso de Next.js com a estrutura /app, além do uso da biblioteca useSWR para fazer a busca de livros na API do Google. Também usei o NextAuth.js para fazer a autenticação com a conta do Google.
+## Features
 
-Ícones desenhados por [Luana Góes](https://luanagoes.vercel.app).
+- Book search using the Google API with useSWR.
+- Bookmarking and removal of books as favorites.
+- Viewing the list of favorite books.
+- Authentication with Google accounts using NextAuth.js.
 
-## Funcionalidades
-
-- Pesquisa de livros na API do Google usando useSWR.
-- Marcação e remoção de livros como favoritos.
-- Visualização da lista de livros favoritos.
-- Autenticação com a conta do Google usando NextAuth.js.
-
-## Tecnologias 
+## Techs 
 
 - [Next.js](https://nextjs.org)
 - [TypeScript](https://www.typescriptlang.org)
@@ -33,11 +31,11 @@ Usei esse projeto como um estudo sobre o uso de Next.js com a estrutura /app, al
 - [useSWR](https://swr.vercel.app)
 - [NextAuth.js](https://next-auth.js.org)
 
-## Instruções 
+## Run locally 
 
-1. Clone o repositório
-2. Instale as dependências: `npm install`
-4. Configure as chaves e segredos de autenticação no `.env`.
-5. Inicie o servidor de desenvolvimento: `npm run dev`
-6. Acesse o site em: `http://localhost:3000`
+1. Clone the repository.
+2. Install the dependencies: npm install.
+3. Configure authentication keys and secrets in .env file.
+4. Start the development server: npm run dev.
+5. Access the website at: http://localhost:3000.
 
