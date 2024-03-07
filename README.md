@@ -1,14 +1,9 @@
 # DáLivros
 
-![iScreen Shoter - Google Chrome - 230820081109](https://github.com/lumamontes/dalivros/assets/60052718/41a94d07-157c-4409-a29c-11e046df9ffc)
-
-
-![iScreen Shoter - Google Chrome - 230820080322](https://github.com/lumamontes/dalivros/assets/60052718/09593edf-69b6-4099-aa22-ecfee4eedb3f)
-
-![iScreen Shoter - Google Chrome - 230820080407](https://github.com/lumamontes/dalivros/assets/60052718/913db18e-ec3a-4a9d-859a-c6fabc0c9e33)
-![iScreen Shoter - Google Chrome - 230820080418](https://github.com/lumamontes/dalivros/assets/60052718/b8017677-9c15-4346-aad8-c7a9f16a7bd1)
-![image](https://github.com/lumamontes/dalivros/assets/60052718/431f7e53-8d37-4337-bc7c-788569a20c05)
-
+|  |  ||
+|---------|---------|---------|
+| ![Image 1](https://github.com/lumamontes/dalivros/assets/60052718/41a94d07-157c-4409-a29c-11e046df9ffc) | ![Image 2](https://github.com/lumamontes/dalivros/assets/60052718/09593edf-69b6-4099-aa22-ecfee4eedb3f) | ![Image 3](https://github.com/lumamontes/dalivros/assets/60052718/913db18e-ec3a-4a9d-859a-c6fabc0c9e33) |
+| ![Image 4](https://github.com/lumamontes/dalivros/assets/60052718/b8017677-9c15-4346-aad8-c7a9f16a7bd1) | ![Image 5](https://github.com/lumamontes/dalivros/assets/60052718/431f7e53-8d37-4337-bc7c-788569a20c05) |  |
 
 This project is a website for book searching that utilizes the Google Books API to retrieve books and enables users to mark books as favorites
 
